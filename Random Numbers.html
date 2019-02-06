@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+
+<head>
+<title>Random Project</title>
+</head>
+<center>
+<h1>Random Numbers</h1>
+</center>
+<hr>
+
+<img style="float:right; margin-right:0px; padding-right:0px;" src="https://media.giphy.com/media/KpgkmStkSlFZu/giphy.gif" width=“420" height=“255" alt=“100” title="" border="0" align=“right” />
+
+
+<body>
+<body bgcolor=“#00b300”>
+
+<form name="x">
+  <input type="text" id="x" name="x" />
+  </br>
+
+  <input type="button" value="Random Number!" onclick="randomValue();" />
+</form>
+
+<script type="text/javascript">
+function Random() {
+var values = []
+  return Math.floor(Math.random() * 100);
+}
+
+function randomValue() {
+  document.getElementById('x').value = Random();
+}
+</script>
+  <SCRIPT LANGUAGE="JavaScript"> 
+        function randint(l, u)
+        {
+            return l + Math.floor( Math.random() * (50));
+        }
+	function generate( )
+	{
+		var minval = 1;
+		var maxval = 50;
+	    var a = new Array;
+	    for ( var i = 0, j = minval; j <= maxval; i++, j++ )
+	    {
+           a[i] = j;
+        }
+	    for ( var i = a.length; i > 0; i-- )
+	    {
+            var j = randint( 0, i );
+            a[i] = a[j];
+        }
+	    document.form.out.value = "";
+	    for ( var i = 0; i < a.length; i++ )
+	    {
+	        document.form.out.value = document.form.out.value + a[i] + '\n';
+        }
+    }
+    </SCRIPT>
+	
+<P>
+	<FORM NAME="form">
+		
+		<TEXTAREA COLS=20 ROWS=20 NAME="out"></TEXTAREA>
+		<P>
+		<INPUT TYPE="button" VALUE="Generate Random List" ONCLICK="generate()">
+
+	</FORM>
+	
+   <SCRIPT LANGUAGE="JavaScript">
+	function sorted( )
+	{
+        var select = 20;
+        var minval = 1;
+        var maxval = 100;
+	    var index = 0;
+	    var remaining = maxval - minval + 1;
+	    document.form1.out.value = "";
+	    for ( var i = minval; i <= maxval; i++ )
+	    {
+	        if ( Math.random() < ( select / remaining))
+            {
+	            document.form1.out.value = document.form1.out.value + i + '\n';
+                index++;
+                select--;
+            }
+            remaining--;
+        }
+	}    
+</SCRIPT>
+	<FORM NAME="form1">
+		<P>
+		<TEXTAREA COLS=20 ROWS=20 NAME="out"></TEXTAREA>
+		<P>
+		<INPUT TYPE="button" VALUE="Generate Sorted List" ONCLICK="sorted()">
+	</FORM>
+</body>
+</html>
